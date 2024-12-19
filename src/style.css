@@ -457,6 +457,15 @@ button:focus {
   padding-left: 25px !important;
   padding-right: 25px !important;
   height: auto !important;
+
+}
+
+.work-experience-card {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  height: auto !important;
 }
 
 .project-card-view {
@@ -466,7 +475,17 @@ button:focus {
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
+  width:100% !important
 }
+/* .project-card-view {
+  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  color: white !important;
+  background-color: transparent !important;
+  opacity: 0.9 !important;
+  transition: all 0.5s ease 0s !important;
+  height: 100% !important;
+  width:100% !important
+} */
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
@@ -508,6 +527,8 @@ button:focus {
   padding: 20px !important;
   opacity: 0.8 !important;
   border-radius: 10px !important;
+align-self: center;
+max-width:250px ;
 }
 
 .blog-img {

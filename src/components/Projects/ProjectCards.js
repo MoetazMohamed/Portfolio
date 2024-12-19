@@ -7,7 +7,34 @@ import { BsGithub } from "react-icons/bs";
 function ProjectCards(props) {
   return (
     <Card className="project-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+      {props.youtubeUrl ? (
+        <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: "20px" }}>
+          <iframe
+            src={props.youtubeUrl}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title={props.title}
+            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", borderRadius: "10px" }}
+          ></iframe>
+        </div>
+      ) : props.imgPath ? (
+        <Card.Img
+          variant="top"
+          src={props.imgPath}
+          alt="card-img"
+          style={{ borderRadius: "10px" }}
+        />
+      ) : (
+        props.videoPath && (
+          <video
+            controls
+            style={{ width: "100%", borderRadius: "10px" }}
+            src={props.videoPath}
+            alt="card-video"
+          />
+        )
+      )}
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Text style={{ textAlign: "justify" }}>
@@ -19,9 +46,6 @@ function ProjectCards(props) {
         </Button>
         {"\n"}
         {"\n"}
-
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
-
         {!props.isBlog && props.demoLink && (
           <Button
             variant="primary"
@@ -37,4 +61,5 @@ function ProjectCards(props) {
     </Card>
   );
 }
+
 export default ProjectCards;

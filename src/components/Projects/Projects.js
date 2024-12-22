@@ -49,7 +49,7 @@ function Projects() {
               title="Library Seating Availability System"
               description="Developed a real-time embedded system to monitor and display library seating availability. Leveraged TTGO ESP32 microcontrollers with pressure sensors to detect seat occupancy, sending updates via HTTP to a backend. Built the backend with NestJS and MongoDB to manage data efficiently and implemented a front-end in Angular 16 with WebSockets for real-time updates."
               youtubeUrl="https://www.youtube.com/embed/H3hLs0Jikmw?si=JmRh7YUqlojD-pxs" // Replace with an actual image path
-              ghLink="https://github.com/example-library-system"
+              ghLink="https://github.com/MoetazMohamed/seat-availabilty-combined-repo.git"
               // // Replace with actual GitHub link
             />
           </Col>
